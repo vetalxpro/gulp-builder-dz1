@@ -14,6 +14,6 @@ Getting started:
 4. npm install
 6. run "gulp" command to start
 
-Edit:
-1) Added task for copy fonts from 'source/fonts/' directory to build/assets/fonts directory.
-2) Added task for generate sprite from source/images/sprite-png/*.png and generate stylesheet(sass) for them.
+Added:
+- Added task for copy fonts from 'source/fonts/' directory to build/assets/fonts directory.
+- Added task for generate sprite from source/images/sprite-png/*.png and generate stylesheet(sass) for them.
