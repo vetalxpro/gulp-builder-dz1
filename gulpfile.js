@@ -12,6 +12,8 @@ global.$ = {
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
+  buffer:require('vinyl-buffer'),
+  merge:require('merge-stream'),
   gp: require('gulp-load-plugins')()
 };
 
@@ -29,7 +31,8 @@ $.gulp.task('default', $.gulp.series(
     'copy:image',
     'copy:fonts',
     'css:foundation',
-    'sprite:svg'
+    'sprite:svg',
+    'sprite:png'
   ),
   $.gulp.parallel(
     'watch',
