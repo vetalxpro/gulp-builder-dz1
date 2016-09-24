@@ -1,4 +1,7 @@
-#Учебная сборка Loftschool (выпускной проект №1) 
+
+#Учебная сборка Loftschool (выпускной проект №1)
+
+Doroshenko Vitalii
 
 Stack:
  - Gulp 4.0
@@ -10,3 +13,7 @@ Getting started:
 3. npm install gulpjs/gulp-cli -g  // Install the latest Gulp CLI tools globally
 4. npm install
 6. run "gulp" command to start
+
+Edit:
+1) Added task for copy fonts from 'source/fonts/' directory to build/assets/fonts directory.
+2) Added task for generate sprite from source/images/sprite-png/*.png and generate stylesheet(sass) for them.

@@ -3,9 +3,4 @@ body {
 }
 
 @import 'common/greating';
-@import "sprites/sprite.scss";
 
-.skype{
-  @include sprite-image($skype);
-  @include sprite-position($skype);
-}

@@ -12,30 +12,30 @@ global.$ = {
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
-  buffer:require('vinyl-buffer'),
-  merge:require('merge-stream'),
+  buffer: require('vinyl-buffer'),
+  merge: require('merge-stream'),
   gp: require('gulp-load-plugins')()
 };
 
-$.path.tasks.forEach(function(taskPath) {
+$.path.tasks.forEach(function (taskPath) {
   require(taskPath)();
 });
 
 $.gulp.task('default', $.gulp.series(
-  'clean',
-  $.gulp.parallel(
-    'sass',
-    'pug',
-    'js:foundation',
-    'js:process',
-    'copy:image',
-    'copy:fonts',
-    'css:foundation',
+    'clean',
     'sprite:svg',
-    'sprite:png'
-  ),
-  $.gulp.parallel(
-    'watch',
-    'serve'
-  )
+    'sprite:png',
+    $.gulp.parallel(
+        'sass',
+        'pug',
+        'js:foundation',
+        'js:process',
+        'copy:image',
+        'copy:fonts',
+        'css:foundation'
+    ),
+    $.gulp.parallel(
+        'watch',
+        'serve'
+    )
 ));
